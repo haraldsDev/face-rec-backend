@@ -1,9 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcrypt-nodejs');
+const cors = require('cors');
 
 const app = express();
 app.use(bodyParser.json());
+app.use(cors());
 
 const database = {
 	users: [
@@ -11,6 +13,7 @@ const database = {
 			id: '123',
 			name: 'John',
 			email: 'john@gmail.com',
+			password: 'john',
 			entries: 0,
 			joined: new Date()
 		},
@@ -18,6 +21,7 @@ const database = {
 			id: '124',
 			name: 'sally',
 			email: 'sally@gmail.com',
+			password: 'sally',
 			entries: 0,
 			joined: new Date()
 		}
@@ -30,8 +34,6 @@ const database = {
 		}
 	]
 }
-
-
 
 app.get('/', (req, res) => {
 	res.json('this is working');
@@ -91,8 +93,6 @@ app.put('/image', (req, res) => {
 		res.json.status(404).json('not user found');
 	}
 })
-
-
 
 app.listen(3030, () => {
 	console.log('app is running on port 3030');
