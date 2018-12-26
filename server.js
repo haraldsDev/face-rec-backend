@@ -9,13 +9,16 @@ const signin = require('./Controllers/signin');
 const profile = require('./Controllers/profile');
 const image = require('./Controllers/image');
 
-const db = knex({
+const db = knex({                
   client: 'pg',
   connection: {
-  	connectionString: process.env.DATABASE_URL,
-  	ssl: true
+    host : '127.0.0.1',
+    user : 'postgres',
+    password : '',
+    database : 'smart'
   }
 });
+
 
 const app = express();
 app.use(bodyParser.json());
