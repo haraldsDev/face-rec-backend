@@ -9,7 +9,7 @@ const signin = require('./Controllers/signin');
 const profile = require('./Controllers/profile');
 const image = require('./Controllers/image');
 
-const db = knex({
+const db = knex({                
   client: 'pg',
   connection: {
 	 host: '127.0.0.1',
@@ -18,6 +18,7 @@ const db = knex({
 	 database: 'smart5'
   }
 });
+
 
 const app = express();
 app.use(bodyParser.json());
