@@ -12,14 +12,21 @@ const image = require('./Controllers/image');
 const db = knex({
   client: 'pg',
   connection: {
-  	connectionString: process.env.DATABASE_URL,
-  	ssl: true
+	 host: '127.0.0.1',
+	 user: 'postgres',
+	 password: '',
+	 database: 'smart5'
   }
 });
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors()); 
+
+    // db.select('*').from('users')
+    // 	.then(data => {
+    // 		console.log(data);
+    // 	});
 
 app.get('/', (req, res) => { res.json('it is working 4') })
 
