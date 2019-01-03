@@ -4,7 +4,7 @@ Face App – an app which recognizes Faces in pictures, and highlights Faces wit
 
 It uses Clarifai API for face recognition: https://clarifai.com/models.
 
-– **Backend**, built with node.js & express.js.
+[✅] **Backend**, built with node.js & express.js.
 
 – **Frontend**, built with React. The Frontend is located in another repo: https://github.com/haraldsDev/face-rec.
 
