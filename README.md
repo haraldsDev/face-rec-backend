@@ -1,6 +1,6 @@
 ## Face Recognition App – Backend
 
-Face App – an app which recognizes Faces in pictures, and highlights Faces with a frame. 
+Face App – an app which recognizes Faces in pictures, and highlights Faces with a frame. Website: https://smart-young.herokuapp.com/
 
 It uses Clarifai API for face recognition: https://clarifai.com/models.
 
